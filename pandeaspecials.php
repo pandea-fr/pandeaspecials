@@ -1,6 +1,6 @@
 <?php
 /*
-* Pandea
+* Prestashop hack by Pandea.fr
 *
 * NOTICE OF LICENSE
 *
