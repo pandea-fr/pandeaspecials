@@ -1,6 +1,6 @@
 <?php
 /*
-* Prestashop hack by Pandea.fr
+* Pandea
 *
 * NOTICE OF LICENSE
 *
@@ -48,9 +48,9 @@ class PandeaSpecials extends Module
 
 	public function install()
 	{
-		return (parent::install() AND $this->registerHook('home'));
+		return (parent::install() AND $this->registerHook('displayHomeTab') AND $this->registerHook('displayHomeTabContent'));
                 
-                if (    parent::install() == false || $this->registerHook('home') == false)
+                if (    parent::install() == false || $this->registerHook('displayHomeTab') == false || $this->registerHook('displayHomeTabContent') == false)
                         return false;
 			return true;
 	}
