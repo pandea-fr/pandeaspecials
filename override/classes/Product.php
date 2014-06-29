@@ -1,9 +1,10 @@
 <?php
-
+/* Pandea.fr 
+ * We override product class to add a getRandomSpecialx on promotions products
+ * 
+ */
 class Product extends ProductCore
 {
-    
-    
 	/**
 	* Get prices drop
 	*

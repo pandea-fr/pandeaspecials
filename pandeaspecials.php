@@ -1,6 +1,6 @@
 <?php
 /*
-* Pandea
+* Prestashop - Cloned by Pandea.fr
 *
 * NOTICE OF LICENSE
 *
@@ -92,12 +92,13 @@ class PandeaSpecials extends Module
 			return ;
                 $specials = Product::getPricesDropR((int)$params['cookie']->id_lang,0,4,false,'rand',null,false,false);
                 if($specials):
+                    $this->context->controller->addCSS(($this->_path).'pandeaspecials.css', 'all');
                     $this->smarty->assign(array(
 			'specials' => $specials,
 			//'priceWithoutReduction_tax_excl' => Tools::ps_round($special['price_without_reduction'], 2),
 			'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
                     ));
-                    return $this->display(__FILE__, 'pandeaspecials_home.tpl'); 
+                    return $this->display(__FILE__, 'pandeaspecials.tpl'); 
                 else:
                 endif;
                 
@@ -105,21 +106,20 @@ class PandeaSpecials extends Module
 
 	public function hookLeftColumn($params)
 	{
-		return $this->hookRightColumn($params);
+            return $this->hookRightColumn($params);
 	}
 	public function hookHome($params)
-	{
-                $this->context->controller->addCSS(($this->_path).'pandeaspecials.css', 'all');
-		return $this->hookRightColumn($params);
+	{       
+            return $this->hookRightColumn($params);
 	}
 	public function hookdisplayHomeTab($params)
 	{
-		return $this->display(__FILE__, 'tab.tpl', $this->getCacheId('pandeaspecials-tab'));
+            return $this->display(__FILE__, 'tab.tpl', $this->getCacheId('pandeaspecials-tab'));
 	}
 
 	public function hookdisplayHomeTabContent($params)
 	{
-		return $this->hookRightColumn($params);
+            return $this->hookRightColumn($params);
 	}
 
 }

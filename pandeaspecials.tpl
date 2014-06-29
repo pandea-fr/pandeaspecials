@@ -1,5 +1,5 @@
 {*
-* 2007-2014 PrestaShop
+* 2007-2014 PrestaShop Edited by Pandea.fr
 *
 * NOTICE OF LICENSE
 *
