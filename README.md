@@ -1,4 +1,4 @@
-pandeaspecials
+PandeaSpecials
 ==============
 
 Module promotions (blockspecials) de prestashop 1.6 revisité, affichant X promos en random dans un des tab de la page d'accueil
