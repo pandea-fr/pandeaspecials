@@ -1,6 +1,10 @@
 pandeaspecials
 ==============
 
-module blockspecials from prestashop 1.6 revisité, affichant X promos en random dans un des tab de la page d'accueil
+Module blockspecials de prestashop 1.6 revisité, affichant X promos en random dans un des tab de la page d'accueil
 
-module blockspecial from prestashop 1.6 hack. Showing X specials products on displayHometab
+Override de la classe Product pour afficher X produits en promotion avec random dans le hook displayHome, displayHomeTab, displayHomeTabContent
+
+
+
+
